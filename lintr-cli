@@ -3,5 +3,5 @@
 set -euo pipefail
 
 for file in "$@"; do
-    R --vanilla -e "lintr::lint(\"$file\")"
+    R --vanilla --quiet -e "lintr::lint(\"$file\")"
 done
